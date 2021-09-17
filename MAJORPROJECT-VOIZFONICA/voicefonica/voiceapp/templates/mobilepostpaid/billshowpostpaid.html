@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-6">
+          <div class="card border-info mb-3" >
+            <div class="card-body">
+              <h5 class="card-title">CUSTOMER DETAIL</h5>
+              <p class="card-text">Thank You for using our service!!</p>
+              {% for i in request.session.user %}
+              <table class="table table-borderless">
+                <tr>
+                    <td>Name:</td>
+                    <td>{{i.cname}}</td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td>{{ i.mobile }}</td>
+                </tr>
+            </table>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card border-info mb-3" >
+            <div class="card-body">
+              <h5 class="card-title">SERVICE DETAIL</h5>
+              <p class="card-text">Thank You for using our service!!</p>
+              {% for i in data_ser %}
+              <table class="table table-borderless">
+                <tr>
+                    <td>Bill Number:</td>
+                    <td>{{ i.bill_no }}</td>
+                </tr>
+                <tr>
+                    <td>Bill Date</td>
+                    <td>{{ i.bill_data }}</td>
+                </tr>
+                <tr>
+                  <td>Bill Period</td>
+                  <td>{{ i.bill_period }}</td>
+              </tr>
+              <tr>
+                  <td>Pay by date</td>
+                  <td>{{ i.pay_date }}</td>
+              </tr>
+            </table>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card border-info mb-3" >
+              <div class="card-body">
+                <h5 class="card-title">ACCOUNT SUMMARY</h5>
+                <p class="card-text">Thank You for using our service!!</p>
+                {% for i in data_acc %}
+                <table class="table table-borderless">
+                  <tr>
+                      <td>Previous Balance:</td>
+                      <td>{{ i.previous_bal }}</td>
+                  </tr>
+                  <tr>
+                      <td>Adjustments</td>
+                      <td>{{ i.Adjustment }}</td>
+                  </tr>
+                  <tr>
+                    <td>This Month's Charge</td>
+                    <td>{{ i.month_charge }}</td>
+                </tr>
+                <tr>
+                    <td>Amount due by</td>
+                    <td>{{ i.amount_due }}</td>
+                </tr>
+              </table>
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card border-info mb-3" >
+              <div class="card-body">
+                <h5 class="card-title">THIS MONTH CHARGES</h5>
+                <p class="card-text">Thank You for using our service!!</p>
+                {% for i in data_mon %}
+                <table class="table table-borderless">
+                  <tr>
+                      <td>Monthly rentals:</td>
+                      <td>{{ i.monthly_rent }}</td>
+                  </tr>
+                  <tr>
+                      <td>Usage:</td>
+                      <td>{{ i.usage }}</td>
+                  </tr>
+                  <tr>
+                    <td>Discounts:</td>
+                    <td>{{ i.discounts }}</td>
+                </tr>
+                <tr>
+                    <td>Taxes: </td>
+                    <td>{{ i.taxes }}</td>
+                </tr>
+                <tr>
+                    <td>Total: </td>
+                    <td>276.89</td>
+                </tr>
+              </table>
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+      </div>   
+
+      <a href="http://127.0.0.1:8000/voice/paypostpaid/" class="btn btn-danger">OK </a>
+        
+      </table>         
+                
+          
+       
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% extends 'admin/adminheader.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+           <form action="http://127.0.0.1:8000/voice/delete_search_mpostpaid" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td><h6><b>Plan Name</h6></td>
+                    <td><b><select  class="form-control" name="ptype" id="">
+                        <option value="999">999</option>
+                        <option value="499">499</option>
+                        <option value="399">399</option>
+                        <option value="599">599</option>
+                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-light"><h6><b>SEARCH</h6></button></center></td>
+                </tr>
+            </table>
+           </form>
+           {% if data %}
+           {% for i in data %}
+           <form action="http://127.0.0.1:8000/voice/deletepostm_api" method="post">
+            <table class="table table-borderless table-striped">
+                  
+                  <tr style="background-color:#00ccff">
+                       <td></td>
+                       <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+                   </tr>
+                    
+                   <tr>
+                    <td><b>Plan</td>
+                    <td><b>{{i.plan_name}}</td>
+                </tr>
+                <tr>
+                    <td><b>Data with Roll over</td>
+                    <td><b>{{i.data}}</td>
+                </tr>
+                <tr>
+                    <td><b>SMS per day</td>
+                    <td><b>{{i.SMS}}</td>
+                </tr>
+                <tr>
+                    <td><b>Local/STD&Roaming calls</td>
+                    <td><b>{{i.calls}}</td>
+                </tr>
+                <tr>
+                    <td><b>Amazon Prime one year subscription + Hotstar VIP</td>
+                    <td><b>{{i.subs}}</td>
+                </tr>
+                    
+                    
+                    <tr>
+                       <td></td>
+                       <td> <center> <button type="submit" class="btn btn-light"><b>DELETE</button></center></td>
+                    </tr>
+                  
+                </table>
+            </form>
+            {% endfor %}
+           {% endif %}
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+     
+{% endblock %}

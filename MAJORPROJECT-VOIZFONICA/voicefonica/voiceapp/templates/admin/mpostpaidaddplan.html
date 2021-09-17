@@ -1,0 +1,43 @@
+{% extends 'admin/adminheader.html' %}
+{% block myContent %}
+
+
+    <div class="container">
+        <div class="row">
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+                <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <form action="http://127.0.0.1:8000/voice/postplan/" method="post">
+                      <table class="table" class="form-control">
+                        <tr>
+                            <td><b>PLAN NAME</td>
+                            <td><b><input name="plan_name" type="number" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><b>DATA</td>
+                            <td><b><input  name="data" type="number" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><b>SMS</td>
+                            <td><b><input name="SMS" type="number" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><b>CALLS</td>
+                            <td><b><input name="calls" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><b>SUBSCRIPTION</td>
+                            <td><b><input name="subs" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button  class="btn btn-info"><b>Submit</button></td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+    
+
+{% endblock %}

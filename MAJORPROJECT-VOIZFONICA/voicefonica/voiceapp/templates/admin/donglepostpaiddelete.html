@@ -1,0 +1,64 @@
+{% extends 'admin/adminheader.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+           <form action="http://127.0.0.1:8000/voice/delete_search_donglepostpaid" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td><h6>Ptype</h6></td>
+                    <td><select  class="form-control" name="ptype" id="">
+                        <option value="Unlimited">Unlimited</option>
+                       
+                    </select></td>
+                </tr>
+                <tr >
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-secondary"><h6>SEARCH</h6></button></center></td>
+                </tr>
+            </table>
+           </form>
+           {% if data %}
+           {% for i in data %}
+           <form action="http://127.0.0.1:8000/voice/deletepostd_api" method="post">
+            <table class="table table-borderless table-striped">
+                  
+                  <tr style="background-color:#00ccff">
+                       <td></td>
+                       <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+                   </tr>
+                    
+                   <tr>
+                    <td><b>Data with roll over</b></td>
+                    <td><b>{{ i.pdata }}GB</b></td>
+                </tr>
+                <tr>
+                    <td><b>SMS per day</b></td>
+                    <td><b>{{ i.sms }}</b></td>
+                </tr>
+                <tr>
+                    <td><b>Local/STD & Roaming calls</b></td>
+                    <td><b>{{ i.ptype }}</b></td>
+                </tr>
+                <tr>
+                    <td><b>Amazon Prime one year subscription</b></td>
+                    <td><b>{{ i.subscription }}</b></td>
+                </tr>
+                    
+                    
+                    <tr >
+                       <td></td>
+                       <td><center><button type="submit" class="btn btn-secondary"><h6>DELETE</h6></button></center></td>
+                    </tr>
+                  
+                </table>
+            </form>
+            {% endfor %}
+           {% endif %}
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+     
+{% endblock %}

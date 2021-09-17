@@ -1,0 +1,24 @@
+{% include 'homeheader.html' %}
+{% include 'mobileprepaid/header.html' %}
+{% block mycontent %}
+<center><h4>INTERNATIONAL ROAMING</h4></center>
+<div class="list-group">
+  {% for i in data %}
+  <form method="POST" >
+    <a href="#" class="list-group-item list-group-item-action list-group-item-success" >
+      <div class="d-flex w-100 justify-content-between">
+        <table class="table table-borderless">
+            <tr>
+              <td><input type="text" name="id" hidden class="form-control" value="{{i.id}}"></td>
+                <td><b>&#8377;{{ i.pname }}<br>{{i.ptalktime}} Hours left</b></td>
+                <td><b>{{i.pdata}} Gb<br>Data</b></td>
+                <td><b>{{i.pvalidity }} Days <br>validity</b></td>
+                <td align="right"><button  class="btn btn-danger">{{i.pname}}</button></td>
+              </tr>
+        </table>
+      </div>
+    </a>
+    </form>
+    {% endfor %}
+  </div> 
+{% endblock %}

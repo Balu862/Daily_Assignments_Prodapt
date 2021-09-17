@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Details</title>
+
+</head>
+<body >
+<form action="http://127.0.0.1:8000/voice/filldetail/" method="post">
+  <form class="row g-3">
+    <table class="table table-borderless">
+        <tr>
+            <td><h3>Fill Your Details</h3> </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+  <div class="container">
+    <div class="row">
+      <div class="col col-2"></div>
+      <div class="col col-12">
+        <div class="col-md-8">
+          <label for="inputName4" class="form-label">Name*</label>
+          <input required name="name" type="text" class="form-control" id="inputName4">
+        </div>
+        <div class="col-md-8">
+          <label for="inputMobilenumber4" class="form-label">Mobile Number*</label>
+          <input required name="mobile_no" type="number" class="form-control" id="inputMobilenumber4">
+        </div>
+      <div class="col-md-8">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input required name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-md-8">
+        <label for="inputAddress2" class="form-label">Address 2</label>
+        <input required name="address_1" type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-md-8">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" name="state" class="form-select">
+          <option selected>Choose...</option>
+          <option>TamilNadu</option>
+          <option>Andhra Pradesh</option>
+          <option>Kerala</option>
+          <option>Delhi</option>
+          <option>Karnataka</option>
+        </select>
+      </div>
+      <div class="col-md-8">
+          <label for="inputCity" class="form-label">City</label>
+          <select id="inputCity" name="city" class="form-select">
+            <option selected>Choose...</option>
+            <option>Thanjavur</option>
+            <option>Chennai</option>
+            <option>Hyderabad</option>
+            <option>Vijayavada</option>
+            <option>Banglore</option>
+          </select>
+        </div>
+      <div class="col-md-8">
+        <label for="inputpin" class="form-label">Pincode</label>
+        <input type="number" name="pincode" class="form-control" id="inputpin">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input required class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Accept terms and conditions
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <a href="http://127.0.0.1:8000/voice/submit/" class="btn btn-danger">SUBMIT </a>
+      </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</form>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+<form action="http://127.0.0.1:8000/plan/filldetail/" method="post">
+  <table class="table table-borderless">
+    <tr>
+      <td>Name</td>
+      <td><input required name="name" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+      <td>Mobile Number</td>
+      <td><input required name="mobile_number" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><input required name="address" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+      <td>Address 2</td>
+      <td><input name="address_1" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td>
+        <select class="form-control" type="text" name="state" id="">
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Andhara pradesh">Andhara pradesh</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td>
+        <select class="form-control" type="text" name="city" id="">
+          <option value="Thanjavur">Thanjavur</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Hyderabad ">Hyderabad</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Pincode</td>
+      <td><input name="pincode" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><Button type="submit" class="btn btn-success">SUBMIT</Button></td>
+    </tr>
+  </table>
+
+</form>
+    </div>
+  </div>
+</div> -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

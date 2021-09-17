@@ -1,0 +1,73 @@
+{% extends 'admin/adminheader.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+           <form action="http://127.0.0.1:8000/voice/update_search_mprepaid" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td><h6><b>PLAN TYPE</h6></td>
+                    <td><b><select  class="form-control" name="ptype" id="">
+                        <option value="data">data</option>
+                        <option value="trulyunlimited">trulyunlimited</option>
+                        <option value="intlr">intlr</option>
+                        <option value="talktime">talktime</option>
+                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-light"><h6><b>SEARCH</h6></button></center></td>
+                </tr>
+            </table>
+           </form>
+           {% if data %}
+           {% for i in data %}
+           <form action="http://127.0.0.1:8000/voice/update_api" method="post">
+            <table class="table table-borderless">
+                  
+                  <tr>
+                       <td></td>
+                       <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+                   </tr>
+                    <tr>
+                        <td><b>PLAN NAME</td>
+                        <td><b><input name="newplanname" value="{{i.pname}}" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><b>PLAN VALIDITY</td>
+                        <td><b><input name="newvalidity" value="{{i.pvalidity}}" type="number" class="form-control"></td>
+                   </tr>
+                    <tr>
+                        <td><b>PLAN DATA</td>
+                        <td><b><input name="newpdata" value="{{i.pdata}}" type="number" class="form-control"></td>
+                    </tr>
+                     <tr>
+                         <td><b>PLAN TALKTIME</td>
+                         <td><b><input name="newtalktime" value="{{i.ptalktime}}" type="number" class="form-control"></td>
+                     </tr>
+                    <tr>
+                      <td><b>SMS</td>
+                      <td><b><input name="newsms" value="{{i.psms}}" type="number" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><b>PLAN TYPE</td>
+                        <td><b><input name="newptype" value="{{i.ptype}}" type="text" class="form-control"></td>
+                    </tr>
+                    
+                    <tr>
+                       <td></td>
+                       <td> <center> <button type="submit" class="btn btn-light"><b>UPDATE</button></center></td>
+                    </tr>
+                  
+                </table>
+            </form>
+            {% endfor %}
+           {% endif %}
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+     
+{% endblock %}

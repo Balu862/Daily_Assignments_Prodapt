@@ -1,0 +1,644 @@
+<!--
+=========================================================
+Material Dashboard - v2.1.2
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-dashboard
+Copyright 2020 Creative Tim (https://www.creative-tim.com)
+Coded by Creative Tim
+
+=========================================================
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>
+    VoizFonica
+  </title>
+  <style>
+    h3{
+      text-shadow: 4px 4px #0a0a0a;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+     nav{
+    background: linear-gradient(#43cea2,#4e93d8);
+    
+    
+
+ }
+ img{
+  background: transparent;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+ image-rendering: -moz-crisp-edges;          /* Firefox */
+ image-rendering: -o-crisp-edges;
+  border-radius: 10px;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast; 
+ }
+  </style>
+
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="/static/assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="/static/assets/demo/demo.css" rel="stylesheet" />
+  <div class="wrapper ">
+    <div class="sidebar" data-color="azure" data-background-color="#4e93d8" data-image="/static/assets/img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo"><a href="" class="simple-text logo-normal">
+       {% if request.session.user %}
+       {% for i in request.session.user %}
+          <div><b>{{ i.cname }}</b></div>
+
+          <img src="{{ i.profilephoto }}" class="img-responsive" style="width: 40%; float: center; margin-right: 10px;" />
+      {% endfor %}
+      {% endif %}
+        </a></div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="./index">
+              <i class="material-icons">dashboard</i>
+              <p><b>Dashboard</b></p>
+            </a>
+          </li>
+         
+          <li class="nav-item ">
+            <a class="nav-link" href="./aboutus">
+              <i class="material-icons">info</i>
+              <p><b>About Us</b></p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./usage">
+              <i class="material-icons">restore</i>
+              <p><b>Usage</b></p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./contactus">
+              <i class="material-icons">account_circle</i>
+              <p><b>Contact Us</b></p>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-primary bg-info">
+            &nbsp;&nbsp;
+            <img src="/static/vflogo.gif"  style="width:142px;height:64px;" >
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          
+          <a class="btn btn-secondary" href="./index"><b>Home</b></a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>Mobile</b>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="./prepaid"><b>Prepaid</b></a></li>
+            <li><a class="dropdown-item" href="./post"><b>Postpaid</b></a></li>
+          </ul>
+        </div>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>Dongle</b>
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <!-- <li><a class="dropdown-item" href="prepaiddongleb"><b>Prepaid</b></a></li>
+            <li><a class="dropdown-item" href="postpaiddongleb"><b>Postpaid</b></a></li> -->
+            <li><a class="dropdown-item" href="./dongdashead"><b>BUY PRODUCT</b></a></li>
+          </ul>
+        </div>
+      </ul>
+      <div class="col col-4">
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+           <b>Help Desk</b>
+          </a>
+                 
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="./faqhome"><b>FAQ's</b></a></li>
+            <li><a class="dropdown-item" href="./contactus"><b>Contact us</b></a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="col col-4">
+      <ul class="navbar-nav ml-auto">
+        <li><a class="btn btn-secondary " href="./logout"><b>Logout</b></a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  {% if index %}
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="/static/5g.png">
+         <div class="carousel-caption d-none d-md-block">
+          <h3><b>5G network will be launched Soon !!</b></h3>
+          <!-- <h3><b>Excited to share new joy will all of our customers</b></h3> -->
+        </div>
+      </div>
+     
+      <div class="carousel-item" data-bs-interval="1000">
+        <img src="/static/simp.png">
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h4><b>Without any barrier ,connect with all over the world</b></h4>
+          <h6><b>If you are not one fo our customer,don't miss your chance go and get new connection</b></h6> -->
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="1000">
+        <img src="/static/prepaid.png">
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>Change from prepaid to postpaid</h5>
+          <p>Win your special offer according to your postpaid pack</p> -->
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endif %}
+  {% block dashboard1 %}
+  {% endblock %}
+  {% if prepaid %}
+  <div class="row">
+    {% for i in prepaid %}
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+
+          <h5 class="card-title">Plan Name: </h5> <p>{{ i.planname }} </p>
+          <p class="card-text">Data Left: {{i.pdata}}GB</p>
+          <p class="card-text">Validity: {{i.pvalidity}}days</p>
+          <p>Talktime Left: {{i.pvoice}}hrs</p>
+          
+        </div>
+      </div>
+    </div>
+    
+    {% endfor %}
+    
+  </div>
+  <a href="./ddata" class="btn btn-info">Recharge</a>
+  {% endif %}
+  {% if noprepaid %}
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">No prepaid</h5>
+          <p class="card-text">You are not having any plans yet</p>
+          <a href="./ddata" class="btn btn-info">Recharge Now</a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if prepaiddongle %}
+  
+    <div class="row">
+      {% for i in prepaiddongle %}
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+  
+            <h5 class="card-title">Plan Id: </h5> <p>{{ i.pname }} </p>
+            <p class="card-text">Data Left: {{i.pdata}}</p>
+            <p class="card-text">Validity: {{i.pvalidity}}</p>
+            <p>Talktime Left: {{i.ptalktime}}</p>
+            
+          </div>
+        </div>
+      </div>
+  
+      {% endfor %}
+    </div>
+ 
+  <a href="./predongledata" class="btn btn-info">Recharge</a>
+    {% endif %}
+    {% if noprepaiddongle %}
+    <p>No Prepaid</p>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">No prepaid</h5>
+            <p class="card-text">You are not having any plans yet</p>
+            <a href="./predongledata" class="btn btn-info">Recharge Now</a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    
+  
+  
+  {% if prepaiddongledetails %}
+      
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="./trulydongleunlimited">TrulyUnlimted</a>
+            <a class="nav-link" href="./donglesmartrecharge">SmartRecharge</a>
+        
+            <a class="nav-link" href="./dongledata">Data</a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    {% endif %}
+  
+
+  {% if prepaiddetails %}
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="./dtruleyunlimted">TrulyUnlimted</a>
+          <a class="nav-link" href="./dsmartrecharge">SmartRecharge</a>
+          <a class="nav-link" href="./dtalktime">TalkTime</a>
+          <a class="nav-link" href="./ddata">Data</a>
+          <a class="nav-link" href="./dintlr">InternationalRoaming</a>
+          
+          
+        </div>
+      </div>
+    </div>
+
+    </nav>
+  {% endif %}
+  
+    <!-- ######### POSTPAID DONGLE ################## -->
+  
+  
+  {% if postpaiddongle %}
+    <div class="row">
+      {% for i in postpaiddongle %}
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+  
+            <h5 class="card-title">Plan Id: </h5> <p>{{ i.pname }} </p>
+            <p class="card-text">Data Left: {{i.data}}</p>
+            <p class="card-text">Validity: {{i.validity}}</p>
+            <p class="card-text">sms: {{i.sms}}</p>
+            <p class="card-text">Subscription: {{i.subscription}}</p>
+            
+            
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+      </div>
+      <a href="./postdongledata" class="btn btn-primary">Recharge</a>
+  {% endif %}
+  {% if nopostpaiddongle %}
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">No postpaid</h5>
+            <p class="card-text">You are not having any plans yet</p>
+            <a href="./postdongledata" class="btn btn-info">Recharge Now</a>
+          </div>
+        </div>
+      </div>
+  {% endif %}
+    
+    
+  {% if postpaiddongledetails %}
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="./postpaidDdata">POSTPAID DONGLE PLANS</a>
+         
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  {% endif %}
+  <!-- {% if prepaid %}
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  {% endif %} -->
+
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</div>
+      
+      <!-- End Navbar -->
+      
+    </div>
+  </div>
+  
+  <!--   Core JS Files   -->
+  <script src="/static/assets/js/core/jquery.min.js"></script>
+  <script src="/static/assets/js/core/popper.min.js"></script>
+  <script src="/static/assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="/static/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="/static/assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="/static/assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="/static/assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="/static/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="/static/assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="/static/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="/static/assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="/static/assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="/static/assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="/static/assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="/static/assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="/static/assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="/static/assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="/static/assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="/static/assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="/static/assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="/static/assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      md.initDashboardPageCharts();
+
+    });
+  </script>
+</head>
+<body>
+  {% block dashboard %}
+  {% endblock %}
+</body>
+
+</html>

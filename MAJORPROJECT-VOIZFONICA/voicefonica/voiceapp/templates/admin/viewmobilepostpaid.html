@@ -1,0 +1,39 @@
+{% extends 'admin/adminheader.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
+        <div class="col col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+            <table class="table table-striped">
+                <thead class="table-secondary">
+                    <tr>
+                        <th><b>PLAN NAME</b></th>
+                        <th><b>PLAN DATA</b></th>
+                        <th><b>CALLS</b></th>
+                        <th><b>PLAN SMS</b></th>
+                        <th><b>SUBSCRIPTION</b></th>
+                        
+                        
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td><b>{{ i.plan_name }}</b></td>
+                        <td><b>{{ i.data }}</b></td>
+                        <td><b>{{ i.calls }}</b></td>
+                        <td><b>{{ i.SMS }}</b></td>
+                        <td><b>{{ i.subs}}</b></td>
+                        
+                       
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col col-12 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
+    </div>
+</div>     
+
+{% endblock %}

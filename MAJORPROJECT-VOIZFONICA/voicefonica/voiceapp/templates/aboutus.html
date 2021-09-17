@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    {% extends 'dashboardheader.html' %}   
+    {% block dashboard1 %}
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.about-section{
+    background: url(https://images.pexels.com/photos/4467860/pexels-photo-4467860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+    </style>
+     <title>Document</title>
+</head>
+<body>
+    <div class="about-section">
+        <div class="inner-container">
+          <h1>About Us</h1>
+          <p class="text">
+             VoizFonica is a Mobile Network and telephone company .VoizFonica provides network Operator and telephone company.voizfonica provides network access and
+             telecommunication servies that help people and companies communicate in an easy ,efficient and environmentally friendly way.</br></br></br>
+             VoizFonica business is very technology dependent as company acts as a network service provider(NSP) in mobile.</br></br></br>
+             VoizFonica is a company that is aware of the new challenges posed by today's society.This is why the company offer the means to faciliate communication between people,
+             providing them with the most secure and state of the art technology in order for them to live better,and for them to achieve whatever they resolve.
+          </p>
+          <div class="skills">
+            <span>Mobile Services</span>
+            <span>Home Services</span>
+            <span>Dongle Services</span>
+          </div>
+        </div>
+      </div>   
+
+{% endblock %}
+<!-- 
+</body>
+</html> -->

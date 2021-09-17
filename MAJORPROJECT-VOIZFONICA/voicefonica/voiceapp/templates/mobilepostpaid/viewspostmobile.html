@@ -1,0 +1,59 @@
+{% include 'homeheader.html' %}
+<style>
+    table{
+        background-color: rgb(170, 233, 233);
+    }
+</style>
+
+    <div class="row">
+        <div class="col-sm-8">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Monthly Rental</h3>
+              <h4 class="text">Per month</h4>
+              <table class="table table-borderless" >
+                {% for i in data %}
+    <!-- <tr>
+        <td>id</td>
+        <td>{{i.id}}</td>
+    </tr> -->
+    <tr>
+        <td>Plan</td>
+        <td>{{i.plan_name}}</td>
+    </tr>
+    <tr>
+        <td>Data with Roll over</td>
+        <td>{{i.data}}</td>
+    </tr>
+    <tr>
+        <td>SMS per day</td>
+        <td>{{i.SMS}}</td>
+    </tr>
+    <tr>
+        <td>Local/STD&Roaming calls</td>
+        <td>{{i.calls}}</td>
+    </tr>
+    <tr>
+        <td>Amazon Prime one year subscription + Hotstar VIP</td>
+        <td>{{i.subs}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="http://127.0.0.1:8000/voice/detailfill/" class="btn btn-danger">BUY </a></td>
+    </tr>
+    
+{% endfor %}
+            </table>
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <h3>
+        <i>Choose Best Plan!!</i>
+    </h3>
+    <h4>
+        <i>Enjoy every second of your Life !! </i>
+    </h4>
+  </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

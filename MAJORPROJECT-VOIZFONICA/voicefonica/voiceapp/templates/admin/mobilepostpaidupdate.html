@@ -1,0 +1,70 @@
+{% extends 'admin/adminheader.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+           <form action="http://127.0.0.1:8000/voice/update_search_mpostpaid" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td><b><h6>Plan Name</h6></td>
+                    <td><b><select  class="form-control" name="ptype" id="">
+                        <option value="999">999</option>
+                        <option value="499">499</option>
+                        <option value="399">399</option>
+                        <option value="599">599</option>
+                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-light"><h6><b>SEARCH</h6></button></center></td>
+                </tr>
+            </table>
+           </form>
+           {% if data %}
+           {% for i in data %}
+           <form action="http://127.0.0.1:8000/voice/postmupdate_api" method="post">
+            <table class="table table-borderless">
+                  
+                  <tr>
+                       <td></td>
+                       <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+                   </tr>
+                    <tr>
+                        <td><b>PLAN NAME</td>
+                        <td><b><input name="newplanname" value="{{i.plan_name}}" type="number" class="form-control"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><b>PLAN DATA</td>
+                        <td><b><input name="newpdata" value="{{i.data}}" type="number" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><b>CALLS</td>
+                        <td><b><input name="newcalls" value="{{i.calls}}" type="text" class="form-control"></td>
+                    </tr>
+                     <tr>
+                         <td><b>SUBSCRIPTION</td>
+                         <td><b><input name="newsubscription" value="{{i.subs}}" type="text" class="form-control"></td>
+                     </tr>
+                    <tr>
+                      <td><b>SMS</td>
+                      <td><b><input name="newsms" value="{{i.SMS}}" type="number" class="form-control"></td>
+                    </tr>
+                    
+                    <tr>
+                       <td></td>
+                       <td> <center> <button type="submit" class="btn btn-light"><b>UPDATE</button></center></td>
+                    </tr>
+                  
+                </table>
+            </form>
+            {% endfor %}
+           {% endif %}
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+     
+{% endblock %}

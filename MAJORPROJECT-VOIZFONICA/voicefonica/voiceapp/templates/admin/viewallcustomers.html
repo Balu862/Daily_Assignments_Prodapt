@@ -1,0 +1,117 @@
+{% extends 'admin/adminheader.html' %}
+{% block myContent %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+h2{
+    
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    font-size: 40px;
+    text-shadow: 2px 2px #FF0000;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    background: linear-gradient(#43cea2,#4e93d8);
+         
+  }
+</style>
+</head>
+<body>
+
+<h2>My Customers</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<table class="table table-striped table-class" id= "myTable">
+
+  
+<thead style="background-color:#00ccff">
+<tr class="header">
+      
+      <th><b>Customer Name</b></th>
+      <th><b>Profile Photo</b></th>
+      <th><b>Email</b></th>
+      <th><b>Mobile</b></th>
+      <th><b>Device</b></th>
+      <th><b>Service</b></th>
+      <th><b>Aadhar</b></th>
+  </tr>
+</thead>
+<tbody>
+    {% for i in data %}
+    <tr>
+        
+        <td><b>{{ i.cname }}</b></td>
+        <td><b><img src="{{ i.profilephoto }}" class="img-responsive" style="width: 40%; float: center; margin-right: 10px;" />
+        </b></td>
+        <td><b>{{ i.email }}</b></td>
+        <td><b>{{ i.mobile}}</b></td>
+        <td><b>{{ i.device}}</b></td>
+        <td><b>{{ i.service}}</b></td>
+        <td><b>{{ i.aadhar}}</b></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+<script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+</body> <!-- 		End of Container -->
+</html>
+{% endblock %}
+
+<!--  Developed By Yasser Mas -->
+
+
+<!--  Developed By Yasser Mas -->

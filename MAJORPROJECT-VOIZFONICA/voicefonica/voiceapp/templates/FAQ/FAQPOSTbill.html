@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    {% extends 'dashboardheader.html' %}   
+    {% block dashboard1 %}
+    <title><b>PLAN DETAILS</b></title>
+<style>
+    p{
+        text-align: center;
+    }
+</style>
+</head>
+<body style="background-color:rgb(219, 233, 232);">
+    <h2>
+        We're here to help you.
+    </h2>   
+    <!-- <table class="table table-borderless">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+       
+    </table>  -->
+<h4>
+    Your Questions Related with:
+</h4>
+<div class="container">
+    <div class="row">
+        <div class="col col-3">
+            <!-- <table class="table table-borderless">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table> -->
+        </div>
+    </div>
+</div>
+    <p>
+        <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          1.I have not received my bill
+        </a>
+        
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            You can view/download/email your bills by simply logging on to VoizFonica.in and clicking on Billing section. Your bills are available under Last Bill and Statements.
+        </div>
+      </div>
+      <p>
+        <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          2. I want to receive a duplicate bill
+        </a>
+        
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            You can view/download/email your bills by simply logging on to VoizFonica.in and clicking on Billing section. Your bills are available under Last Bill and Statements.
+        </div>
+      </div>
+      <p>
+        <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          3. I have not received my payment confirmation
+        </a>
+        
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Mentioned below are the timelines for payment posting:<br>
+
+
+1. My VoizFonica Website (VoizFonica.in) - 2 working days.<br>
+2. Standing Instructions (SI) / NACH (Auto debit from credit card/bank account) - 2 working days.<br>
+3. Net Banking (Using Bank Website for Utility Payments) - 6 working days.<br>
+4. Cash Payment - 1 working day.<br>
+5. Cheque - 2 working days.<br>
+6. Online Wallets (Paytm, Gpay etc.) - 2 working days.<br>
+
+ 
+
+In case the timeline has exceeded for your payment, please call 122.
+        </div>
+      </div>
+      
+{% endblock %}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

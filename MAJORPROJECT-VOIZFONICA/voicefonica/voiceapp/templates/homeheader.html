@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>VoizFonica</title>
+    <style>
+      nav{
+    background: linear-gradient(#43cea2,#4e93d8);
+
+ }
+
+ body{
+          
+          height:100%;
+          width:100%;
+
+         background-repeat:no-repeat; 
+         background-size: cover;
+           }
+
+           img{
+  background: transparent;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+ image-rendering: -moz-crisp-edges;          /* Firefox */
+ image-rendering: -o-crisp-edges;
+  border-radius: 10px;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast; 
+ }
+ 
+      h5{
+          color: white;
+      }
+      p{
+          color: whitesmoke;
+      }
+      h4{
+          color: black;
+      }
+      h6{
+          color: black;
+      }
+  </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <img src="/static/vflogo.gif"  style="width:142px;height:64px;" >
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="btn btn-light" href="./"><b>Home</b></a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>
+              Mobile
+            </b>
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="./homeprepaid"><b>Prepaid</b></a></li>
+            <li><a class="dropdown-item" href="./viewsui"><b>Postpaid</b></a></li>
+          </ul>
+        </div>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>Dongle</b>
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voice/homeprepaiddongle"><b>Prepaid</b></a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/voice/homepostpaiddongle"><b>Postpaid</b></a></li> -->
+            <li><a class="dropdown-item" href="./dongle">BUY PRODUCT</a></li>
+          </ul>
+        </div>
+    
+
+        <br>
+      <!-- </ul>
+      <div class="col col-6"> -->
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+           <b>HELP DESK</b>
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="./faqhomep"><b>FAQ's</b></a></li>
+            <li><a class="dropdown-item" href="./contactus"><b>Contact us</b></a></li>
+            
+          </ul>
+
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <ul class="navbar-nav ml-auto">
+          <li>
+            <a class="btn btn-light " href="./aboutus"><b>ABOUT US</b></a>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+   
+      <ul class="navbar-nav ml-auto">
+        <li><a class="btn btn-light " href="./login"><b>Login</b></a></li>
+      </ul>
+    </div>
+  </nav>
+  {% if prepaid %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="./truleyunlimted"><b>TrulyUnlimted</b></a>
+          <a class="nav-link" href="./smartrecharge"><b>SmartRecharge</b></a>
+          <a class="nav-link" href="./talktime"><b>TalkTime</b></a>
+          <a class="nav-link" href="./data"><b>Data</b></a>
+          <a class="nav-link" href="./intlr"><b>InternationalRoaming</b></a>
+    {% endif %}
+
+    {% if prepaiddongle %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="./predongletruleyunlimted"><b>TrulyUnlimted</b></a>
+            <a class="nav-link" href="./predonglesmartrecharge"><b>SmartRecharge</b></a>
+            <a class="nav-link" href="./predongledata"><b>Data</b></a>
+           
+      {% endif %}
+  
+      {% if postpaiddongle %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="./postpaidDdata"><b>POSTPAID DONGLE PLANS</b></a>
+             
+      {% endif %}
+  
+  
+  {% if home %}
+<table class="table table-borderless">
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="/static/5gg.png">
+        <div class="carousel-caption d-none d-md-block">
+          <h5><b>5G network will be launched Soon !!</b></h5>
+          <p><b>Excited to share new joy will all of our customers</b></p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="/static/vv.png">
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h4><b>Without any barrier ,connect with all over the world</b></h4>
+          <h6><b>If you are not one fo our customer,don't miss your chance go and get new connection</b></h6> -->
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="/static/psim.png">
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h4><b>Without any barrier ,connect with all over the world</b></h4>
+          <h6><b>If you are not one fo our customer,don't miss your chance go and get new connection</b></h6> -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/sims.png">
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden"><b>Previous</b></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden"><b>Next</b></span>
+    </button>
+  </div>
+{% endif %}
+{% block home %}
+
+{% endblock %}
+  
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

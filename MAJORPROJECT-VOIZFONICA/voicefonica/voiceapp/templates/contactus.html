@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+  box-sizing:border-box;
+  margin:0;
+}
+
+body {
+	background: linear-gradient(#43cea2,#4e93d8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+  font-size:10px;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
+
+.container {
+	background-color: white;
+	border-radius: 5px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+  min-width:370px;
+}
+
+h2 {
+  font-size:2rem;
+  margin-bottom:1rem;
+}
+.form-container {
+  display:flex;
+}
+
+.left-container {
+  flex:1;
+  height:480px;
+  background-color:teal;
+}
+.right-container {
+  display:flex;
+  flex:1;
+  height:460px;
+  background-color: white;
+  justify-content:center;
+  align-items:center;
+}
+
+.left-container {
+  display:flex;
+  flex:1;
+  height:480px;
+  justify-content:center;
+  align-items:center;
+    color:white;
+}
+
+.left-container p {
+  font-size:0.9rem;
+}
+
+.right-inner-container {
+  width:70%;
+  height:80%;
+  text-align:center;
+}
+
+.left-inner-container {
+  height:50%;
+  width:80%;
+  text-align:center;
+  line-height:22px;
+}
+
+input, textarea {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+  font-size:0.8rem;
+}
+
+input:focus, textarea:focus{
+  outline:1px solid teal;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #1e8fa0;
+	background-color: #1e8fa0;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  cursor:pointer;
+}
+
+button:hover {
+  opacity:0.7;
+}
+@media only screen and (max-width: 600px) {
+  .left-container{
+    display: none;
+  }
+  .lg-view {
+    display:none;  
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sm-view {
+    display:none;  
+  }
+}
+
+form p {
+  text-align:left;
+}
+			
+					                        
+  </style>
+  <title>Document</title>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="form-container">
+      <div class="left-container">
+        <div class="left-inner-container">
+        <h6>Address</h6>
+        <p>44 Pune Main Street</p>
+          <br>
+          <h6>Phone</h6>
+        <p>(+91) 7876234567</p>
+        <h6>Website</h6>
+        <p>Voizfonica.com</p>
+        <h6>Email</h6>
+        <p>voizfonica123@gmail.com</p>
+      </div>
+      
+        <!-- form container -->
+        <form action="./contact" method="POST">
+          <h3 align="right">Contact Us</h3>
+            <!-- Name -->
+            <div class="firstname">
+                <label for="firstname">FirstName</label>
+                <br>
+                <td><input name="firstname" type="text" class="form-control"></td>
+            </div>
+            <!-- Company -->
+            <div class="lastname">
+                <label for="lastname">Lastname</label>
+                <br>
+                <td><input name="lastname" type="text" class="form-control"></td>
+            </div>
+            <!-- Email -->
+            <div class="country">
+                <label for="country">Country</label>
+                <br>
+                <td><input name="country" type="text" class="form-control"></td>
+            </div>
+            <!-- Telephone -->
+            <div class="subject">
+                <label for="subject">Subject</label>
+                <br>
+                <td><input name="subject" type="textarea" class="form-control"></td>
+            </div>
+            <div class="submit">
+              <td></td>
+              
+              <td><center><button class="btn btn-info" formaction="contact">Submit</button></center></td>
+            </div>
+        </form>
+    </div>
+  </main>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postpaid Dongle</title>
+</head>
+<style>
+    
+    table{
+        background-color:#609fc9;
+        font-family: "Times New Roman", Times, serif;
+    }
+    h2{
+        background-color:#609fc9;
+        text-shadow: 2px 2px #FF0000;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        
+        }
+    div{
+        font-family: "Times New Roman", Times, serif;
+    }
+</style>
+<h2 >POSTPAID DONGLE</h2>
+<body>
+    
+    <div class="list-group">
+        {% for i in data %}
+        <form method="POST" action="../postpaiddongleplan"> 
+        <a href="#" class="list-group-item list-group-item-action list-group-item-dark" >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1"><b>Monthly Rental</b></h5>
+            <small><b>₹{{ i.pname }}/per month</b></small>
+            <table class="table table-borderless">
+                <tr>
+                    <td><input type="text" name="id" hidden class="form-control" value="{{i.id}}"></td>
+                
+                <tr>
+                    <td><b>Data with roll over</b></td>
+                    <td><b>{{ i.pdata }}GB</b></td>
+                </tr>
+                <tr>
+                    <td><b>SMS per day</b></td>
+                    <td><b>{{ i.sms }}</b></td>
+                </tr>
+                <tr>
+                    <td><b>Local/STD & Roaming calls</b></td>
+                    <td><b>{{ i.ptype }}</b></td>
+                </tr>
+                <tr>
+                    <td><b>Amazon Prime one year subscription</b></td>
+                    <td><b>{{ i.subscription }}</b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="right"><button type="submit" formaction="#" class="btn btn-danger">{{i.pname}}</button></td>
+              </tr>
+
+            </table>
+          </div>
+         
+        </a>
+        
+        </form>
+          {% endfor %}
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

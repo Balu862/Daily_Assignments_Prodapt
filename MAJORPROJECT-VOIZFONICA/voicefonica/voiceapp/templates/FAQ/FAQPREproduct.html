@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    {% extends 'dashboardheader.html' %}   
+    {% block dashboard1 %}
+    <title>PLAN DETAILS</title>
+<style>
+    p{
+        text-align: center;
+    }
+</style>
+</head>
+<body style="background-color:rgb(219, 233, 232);">
+    <h2>
+        We're here to help you.
+    </h2>   
+    <!-- <table class="table table-borderless">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+       
+    </table>  -->
+<h4>
+    Your Questions Related with:
+</h4>
+<div class="container">
+    <div class="row">
+        <div class="col col-3">
+            <!-- <table class="table table-borderless">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table> -->
+        </div>
+    </div>
+</div>
+    <p>
+        <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          1.What are the taxes charged?
+        </a>
+        
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            As per government directive, from 1st July 2017, 18% Goods and Services Tax (GST) is applicable on all our services..
+        </div>
+      </div>
+      <p>
+        <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          2.I want to know regarding all plans available
+        </a>
+        
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Simply login at VoizFonica.in go to prepaid>>viewplans
+        </div>
+      </div>
+      
+      {% endblock %}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
